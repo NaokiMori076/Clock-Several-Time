@@ -1,0 +1,772 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+body {
+  overflow-x: hidden;
+}
+
+.clock-container {
+  width: 60%;
+  margin: auto;
+}
+
+.col-xs-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.top-banner {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 3.7vw;
+
+  .title {
+    color: #009146;
+  }
+
+  .text-white {
+    color: #ffffff;
+  }
+}
+
+
+#date {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+  font-family: "Open Sans", sas-serif;
+  font-size: 2em;
+  padding: 0.5em;
+  text-align: center;
+}
+
+#clock {
+  align-items: center;
+  -webkit-align-items: center;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  width: 100%;
+  padding: 0px 11px;
+}
+
+
+
+.unit {
+  /*background: linear-gradient(#aaa, #777);*/
+  border-radius: 15px;
+  box-shadow: 0 2px 2px #444;
+  color: #dc3545;
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.7vw;
+  height: 100%;
+  margin: 0 10px;
+  text-align: center;
+  text-shadow: 0 2px 2px #666;
+  width: 23%;
+  font-weight: bold;
+}
+
+.time-item {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0px;
+
+  .prayer-name {
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+    width: 40%;
+  }
+
+  .prayer-time {
+    display: inline-block;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    margin: auto;
+    width: 40%;
+  }
+
+  .prayer-time button {
+    background: #009146;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0px 10px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 4vw;
+    font-weight: bold;
+    float: right;
+    border: none;
+  }
+}
+
+
+
+@media (max-width: 2000px) {
+  .clock-container {
+    width: 70%;
+    margin: auto;
+  }
+
+  .top-banner {
+    font-size: 70px;
+  }
+
+  .unit {
+    font-size: 70px;
+  }
+
+
+}
+
+@media (max-width: 1400px) {
+  .top-banner {
+    font-size: 65px;
+  }
+
+  .time-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .prayer-name {
+      width: 80%;
+      font-size: 70px;
+    }
+
+    .prayer-time {
+      width: 80%;
+    }
+
+    .prayer-time button {
+      background: #009146;
+      color: #fff;
+      border-radius: 5px;
+      padding: 0px 10px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 70px;
+      font-weight: bold;
+      border: none;
+      width: 100%;
+      margin: auto;
+      float: none;
+      /* width: 450px; */
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .top-banner {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .clock-container {
+    width: 80%;
+    margin: auto;
+  }
+
+  .top-banner {
+    font-size: 55px;
+  }
+
+  .unit {
+    font-size: 50px;
+  }
+
+  .time-item {
+    .prayer-name {
+      font-size: 60px;
+    }
+
+    .prayer-time button {
+      font-size: 60px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .top-banner {
+    font-size: 50px;
+  }
+
+  .unit {
+    font-size: 40px;
+  }
+
+  .time-item {
+    .prayer-name {
+      font-size: 50px;
+    }
+
+    .prayer-time button {
+      font-size: 50px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .top-banner {
+    font-size: 40px;
+  }
+
+  .unit {
+    font-size: 30px;
+  }
+
+  .time-item {
+    .prayer-name {
+      font-size: 40px;
+    }
+
+    .prayer-time button {
+      font-size: 40px;
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .unit {
+    font-size: 25px;
+  }
+
+  .time-item {
+    .prayer-name {
+      font-size: 35px;
+    }
+
+    .prayer-time button {
+      font-size: 35px;
+    }
+  }
+}
+
+.prayer-list {
+  position: relative;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.1);
+  display: block;
+  border-radius: 5px;
+}
+
+.prayer-list h4 {
+  display: block;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  padding: 18px 0;
+}
+
+.prayer-list strong {
+  display: block;
+  margin: 0 0 20px;
+  color: #fff;
+  font-size: 24px;
+  font-family: "Droid Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.prayer-list button {
+  display: inline-block;
+  background: #009146;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 0 28px;
+  padding: 10px 23px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.bg-black {
+  background: #000000;
+}
+
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+  /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+  /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  .top-banner ul li h1 {
+    font-size: 55px;
+  }
+
+  /*#clock{
+    height: 100px;
+    left: 0;
+    top: 0;
+    width: 360px;
+  }*/
+  /*.unit{
+    border-radius: 15px;
+    box-shadow: 0 2px 2px #444;
+    font-size: 2em;
+    height: 100%;
+    line-height: 100px;
+    margin: 0 10px;
+    text-align: center;
+    text-shadow: 0 2px 2px #666;
+    width: 23%;
+  }*/
+  /*.prayer-name {
+    font-size: 40px;
+    padding: 20px 0
+  }
+
+  .prayer-time button {
+    margin: 0 0 10px;
+    padding: 10px 23px;
+    font-size: 75px;
+    font-weight: bold;
+    width: 350px;
+  }*/
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  /*.prayer-name {
+    font-size: 40px;
+    padding: 20px 0
+  }
+
+  .prayer-time button {
+    margin: 0 0 10px;
+    padding: 10px 23px;
+    font-size: 75px;
+    font-weight: bold;
+    width: 380px;
+  }*/
+}
+
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+  /* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+  /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+  /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+  /* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+
+
+  .prayer-name {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+  .prayer-time button {
+    margin: 0 0 10px;
+    padding: 10px 23px;
+    font-size: 25px;
+    font-weight: bold;
+    width: 158px;
+  }
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {}
+
+/* iPhone 6, 7, 8 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {
+
+
+  .prayer-name {
+    font-size: 40px;
+    padding: 20px 0;
+  }
+
+  .prayer-time button {
+    margin: 0 0 10px;
+    padding: 10px 23px;
+    font-size: 60px;
+    font-weight: bold;
+    width: 325px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {
+
+  .prayer-name {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+  .prayer-time button {
+    margin: 0 0 10px;
+    padding: 10px 23px;
+    font-size: 25px;
+    font-weight: bold;
+    width: 158px;
+  }
+}
+
+/* iPhone 6+, 7+, 8+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {}
+
+/* iPhone X ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) {}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {}
+
+/* iPhone XS Max, XR ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) {}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {}
+
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {
+
+
+  .prayer-name {
+    font-size: 40px;
+    padding: 20px 0;
+  }
+
+  .prayer-time button {
+    margin: 0 0 10px;
+    padding: 10px 23px;
+    font-size: 60px;
+    font-weight: bold;
+    width: 325px;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {
+
+
+  .prayer-name {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+  .prayer-time button {
+    margin: 0 0 10px;
+    padding: 10px 23px;
+    font-size: 25px;
+    font-weight: bold;
+    width: 158px;
+  }
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) {}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {}
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3) {
+
+
+  .prayer-name {
+    font-size: 40px;
+    padding: 20px 0;
+  }
+
+  .prayer-time button {
+    margin: 0 0 10px;
+    padding: 10px 23px;
+    font-size: 60px;
+    font-weight: bold;
+    width: 325px;
+  }
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3) {
+
+  .prayer-name {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+  .prayer-time button {
+    margin: 0 0 10px;
+    padding: 10px 23px;
+    font-size: 25px;
+    font-weight: bold;
+    width: 158px;
+  }
+}
+
+.notify-title {
+  font-size: 90px;
+  text-align: center;
+  display: block;
+  color: DarkGreen;
+}
+
+.notify-message-block {
+  display: block;
+  text-align: center;
+}
+
+.notify-message-block .notify-mssg-footer {
+  font-size: 45px;
+  color: red;
+  font-weight: bold;
+}
+
+.notify-message-block .notify-large-mssg-footer {
+  font-size: 60px;
+}
+
+.progress-bg {
+  margin: 0 auto;
+  width: 75%;
+  height: 78px;
+  border-radius: 10px;
+  text-align: center;
+  -moz-box-shadow: inset 0 0 10px #ccc;
+  -webkit-box-shadow: inset 0 0 10px #ccc;
+  box-shadow: inset 0 0 10px #ccc;
+  background-color: red;
+}
+
+.progress-bar {
+  height: 78px;
+  border-radius: 10px;
+  float: left;
+  width: 50%;
+  /* fallback */
+  background-color: #ADFF2F;
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ADFF2F), to(#006400));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(top, #ADFF2F, #006400);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(top, #ADFF2F, #006400);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(top, #ADFF2F, #006400);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(top, #ADFF2F, #006400);
+}
+
+.progress-bg h3.goal,
+.progress-bg h3.raised {
+  font-family: Arial, sans-serif;
+  font-size: 2.7em;
+  font-weight: 600;
+  line-height: 78px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: inline;
+}
+
+
+.progress-bg h3.raised {
+  color: #fff;
+  /*margin: 14px 25px 0 50px;
+  padding: 0 25px 0 0;*/
+}
+
+.progress-bg h3.goal {
+  color: #fff;
+  text-align: center;
+}
+
+body .progress-bg h3.raised {
+  -webkit-animation: fadein 4s;
+  /* Safari and Chrome */
+  -moz-animation: fadein 4s;
+  /* Firefox */
+  -ms-animation: fadein 4s;
+  /* Internet Explorer */
+  -o-animation: fadein 4s;
+  /* Opera */
+  animation: fadein 4s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+​
+
+/* Opera */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+​ .progress-bg h3.goal {
+  float: right;
+  display: inline;
+  margin: 14px 25px 0 50px;
+  padding: 0 25px 0 0;
+  text-align: center;
+}
+
+body .progress-bg div {
+  -webkit-animation: progress-bar 2s ease forwards;
+  -moz-animation: progress-bar 2s ease forwards;
+  -o-animation: progress-bar 2s ease forwards;
+  animation: progress-bar 2s ease forwards;
+}
+
+@-webkit-keyframes progress-bar {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@-moz-keyframes progress-bar {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@-o-keyframes progress-bar {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes progress-bar {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.blinking {
+  animation: blinkingText 1s infinite;
+}
+
+@keyframes blinkingText {
+  0% {
+    color: #FFF;
+  }
+
+  49% {
+    color: transparent;
+  }
+
+  50% {
+    color: transparent;
+  }
+
+  99% {
+    color: transparent;
+  }
+
+  100% {
+    color: #FFF;
+  }
+}
+
+.prayer-time button.red {
+  background-color: red;
+}

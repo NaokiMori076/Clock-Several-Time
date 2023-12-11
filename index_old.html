@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"
+    integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+    <title>Prayer Time</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css?v=04062019" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css" rel="stylesheet">
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-store" />
+    <script language="javascript" type="text/javascript">
+        setTimeout("location.reload()", 60000*60);
+    </script>
+</head>
+
+<body class="bg-black">
+    <nav class="navbar navbar-expand-sm navbar-dark mb-3">
+        <div class="top-banner">
+            <ul class="nav">
+                <li class="nav-item">
+                    <h1 style=""><i class="fas fa-mosque"></i> Jannatul Ferdous Mosque</h1>
+                    <h1 class="text-white" id="printDate" style=""></h1>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main role="main" class="container">
+
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-12 col-md-12">
+                    <p id="date"></p>
+                    <div id="clock">
+                        <p class="unit" id="hours"></p>
+                        <p class="unit" id="minutes"></p>
+                        <p class="unit" id="seconds"></p>
+                        <p class="unit" id="ampm"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-xs-6 col-md-6 prayer-name text-white">
+                    <span>Sunrise</span>
+                </div>
+                <div class="col-xs-6 col-md-6 prayer-time">
+                    <button class="sunrise-btn"></button>
+                </div>
+            </div>
+            <!-- <div class="row mt-5">
+                <div class="col-xs-6 col-md-6 prayer-name text-white">
+                    <span>Suhur</span>
+                </div>
+                <div class="col-xs-6 col-md-6 prayer-time">
+                    <button id="suhur" style="background-color: rebeccapurple"></button>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-xs-6 col-md-6 prayer-name text-white">
+                    <span>Fajr</span>
+                </div>
+                <div class="col-xs-6 col-md-6 prayer-time">
+                    <button id="fazr"></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-md-6 prayer-name text-white">
+                    <span>Dhuhr</span>
+                </div>
+                <div class="col-xs-6 col-md-6 prayer-time">
+                    <button id="dhuhr"></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-md-6 prayer-name text-white">
+                    <span>Asr</span>
+                </div>
+                <div class="col-xs-6 col-md-6 prayer-time">
+                    <button id="asr"></button>
+                </div>
+            </div>
+        <!--<div class="row">
+            <div class="col-12 col-md-6 prayer-name text-white">
+                <span>Sunset</span>
+            </div>
+            <div class="col-6 col-md-6 prayer-time">
+                <button class="sunset-btn"></button>
+            </div>
+        </div>-->
+        <div class="row">
+            <div class="col-xs-6 col-md-6 prayer-name text-white">
+                <span>Maghrib</span>
+            </div>
+            <div class="col-xs-6 col-md-6 prayer-time">
+                <button id="maghrib"></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-6 prayer-name text-white">
+                <span>Isha</span>
+            </div>
+            <div class="col-xs-6 col-md-6 prayer-time">
+                <button id="isha"></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-6 prayer-name text-white">
+                <span>Jummah</span>
+            </div>
+            <div class="col-xs-6 col-md-6 prayer-time">
+                <button id="jummah"></button>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-5 mb-5">
+            <div class="col-md-12">
+                <a class="weatherwidget-io" href="https://forecast7.com/en/43d65n79d38/toronto/" data-label_1="TORONTO" data-label_2="WEATHER" data-icons="Climacons Animated" data-days="5" data-theme="dark" >TORONTO WEATHER</a>
+                <script>
+                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                </script>
+                <!-- <script type='text/javascript' src='https://darksky.net/widget/default/43.654,-79.3872/us12/en.js?width=100%&height=350&title=Full Forecast&textColor=ffffff&bgColor=ffffff&transparency=true&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=ffffff&ltColor=ffffff&displaySum=yes&displayHeader=no'></script> -->
+            </div>
+        </div>
+        <div class="firework-eid"></div>
+
+    </main><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/sun-js-master/sun.js"></script>
+    <script src="js/custom.js?v=02062019"></script>
+    <script src="js/jquery.fireworks.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mouse0270-bootstrap-notify/3.1.5/bootstrap-notify.min.js"></script>
+    <script>
+        var alarmHour = null;
+        var alarmMinute = null;
+        var audioElement = new Audio("");
+        //audio element just for alarm sound
+        document.body.appendChild(audioElement);
+        var canPlayType = audioElement.canPlayType("audio/ogg");
+        if(canPlayType.match(/maybe|probably/i)) {
+            audioElement.src = './alarm/alarm.ogg';
+        } else {
+            audioElement.src = './alarm/alarm.mp3';
+        }
+            //audioElement.play();
+        $(function() {                    
+            updatePrayerTime();
+        });
+        function updatePrayerTime() {
+            var ts = Math.round((new Date()).getTime() / 1000);
+            $.getJSON('backend/times.json?v='+ts, function(data) {
+                if(data.fazr) {
+                  $("#fazr").text(data.fazr);
+                  var fazrToStart = getTimeDifferenceFromCurrentTime(convertTimeTo24(data.fazr));
+                  if(fazrToStart >= -10 && fazrToStart <= -1) {
+                    $("#fazr").addClass('blinking red');
+                    var fazrTime = convertTimeTo24(data.fazr);
+                    alarmHour = fazrTime[0];
+                    alarmMinute = fazrTime[1];
+                  } else {
+                    $("#fazr").removeClass('blinking red');
+                  }
+                }
+                if(data.suhur) {
+                  $("#suhur").text(data.suhur);
+                }
+                if(data.dhuhr) {
+                  $("#dhuhr").text(data.dhuhr);
+                  var dhuhrToStart = getTimeDifferenceFromCurrentTime(convertTimeTo24(data.dhuhr));
+                  var dhDate = new Date();
+                  if(dhuhrToStart >= -10 && dhuhrToStart <= -1 && 5 != dhDate.getDay()) {
+                    $("#dhuhr").addClass('blinking red');
+                    var dhuhrTime = convertTimeTo24(data.dhuhr);
+                    alarmHour = dhuhrTime[0];
+                    alarmMinute = dhuhrTime[1];
+                  } else {
+                    $("#dhuhr").removeClass('blinking red');
+                  }
+                }
+                if(data.asr) {
+                  $("#asr").text(data.asr);
+                  var asrToStart = getTimeDifferenceFromCurrentTime(convertTimeTo24(data.asr));
+                  if(asrToStart >= -10 && asrToStart <= -1) {
+                    $("#asr").addClass('blinking red');
+                    var asrTime = convertTimeTo24(data.asr);
+                    alarmHour = asrTime[0];
+                    alarmMinute = asrTime[1];
+                  } else {
+                    $("#asr").removeClass('blinking red');
+                  }
+                }
+            //if(data.maghrib) {
+              //$("#maghrib").text(data.maghrib);
+            //}
+                if(data.isha) {
+                    $("#isha").text(data.isha);
+                    var ishaToStart = getTimeDifferenceFromCurrentTime(convertTimeTo24(data.isha));
+                    if(ishaToStart >= -10 && ishaToStart <= -1) {
+                        $("#isha").addClass('blinking red');
+                        var ishaTime = convertTimeTo24(data.isha);
+                        alarmHour = ishaTime[0];
+                        alarmMinute = ishaTime[1];
+                    } else {
+                        $("#isha").removeClass('blinking red');
+                    }
+                }
+                if(data.jummah) {
+                    $("#jummah").text(data.jummah);
+                    var jummahToStart = getTimeDifferenceFromCurrentTime(convertTimeTo24(data.jummah));
+                    var jDate = new Date();
+                    //console.log(jDate.getDay());
+                    if(jummahToStart >= -10 && jummahToStart <= -1 && 5 == jDate.getDay()) {
+                        $("#jummah").addClass('blinking red');
+                    } else {
+                        $("#jummah").removeClass('blinking red');
+                    }
+                }
+            })
+        }        
+        window.setInterval(updatePrayerTime, 60000);
+
+        $.notifyDefaults({
+            // settings
+            element: 'body',
+            //position: null,
+            type: "success",
+            //allow_dismiss: true,
+            newest_on_top: true,
+            showProgressbar: true,
+            placement: {
+                from: "top",
+                align: "center"
+            },
+            offset: 250,
+            spacing: 10,
+            z_index: 1031,
+            delay: 60000,
+            timer: 10,
+            url_target: '_blank',
+            mouse_over: null,
+            animate: {
+                enter: 'animated fadeInDown',
+                exit: 'animated fadeOutRight'
+            },
+            onShow: null,
+            onShown: null,
+            onClose: null,
+            onClosed: null,
+            icon_type: 'class',
+            template: '<div data-notify="container" class="col-xs-11 col-sm-10 alert alert-{0}" role="alert">' +
+            '<button type="button" aria-hidden="true" class="close" data-notify="dismiss">×</button>' +
+            '<span data-notify="icon"></span> ' +
+            '<span class="notify-title" data-notify="title">{1}</span> ' +
+            '<span class="notify-message-block" data-notify="message">{2}</span>' +
+            '<div class="progress" data-notify="progressbar">' +
+            '<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+            '</div>' +
+            '<a href="{3}" target="{4}" data-notify="url"></a>' +
+            '</div>'
+        });
+
+        function notificationMssg(){
+            $.notifyClose();
+            $.notify({
+                // options
+                title: '<strong>Ramadan Target</strong><br/>',
+                message: "<br><div class='progress-bg'><div class='progress-bar'><h3 class='raised'>Acheived: $75,000</h3></div><h3 class='goal'></h3></div><br/><div class='progress-bg'><h3 class='goal'>Goal: $75,000</h3></div><br/><span class='notify-mssg-footer notify-large-mssg-footer'>Alhamdulliah, with your support we have reached our target</span>",
+                icon: 'glyphicon glyphicon-ok',
+                url: '',
+                target: '_blank'
+            }, {
+                delay: 10000,
+            });
+        }
+        function eidNotificationMssg(){
+            $.notifyClose();
+            $.notify({
+                // options
+                title: '<strong><i class="fas fa-star-and-crescent"></i> Eid Mubarak</strong><br/>',
+                message: "<br><img src='./eid_mubarak_vertical.jpg' /><br/></span>",
+                icon: 'glyphicon glyphicon-ok',
+                url: '',
+                target: '_blank'
+            }, {
+                showProgressbar: false,
+                delay: 10000,
+            });
+        } 
+        function eidNotificationMssg1(){
+            $.notifyClose();
+            $.notify({
+                // options
+                title: '',
+                message: "<br><img src='./eid_mubarak_vertical.jpg' /><br/>",
+                icon: 'glyphicon glyphicon-ok',
+                url: '',
+                target: '_blank'
+            }, {
+                showProgressbar: false,
+                delay: 10000,
+            });
+        }        
+        /*window.setIterval(notificationMssg, 3*60000);*/
+        //window.setInterval(notificationMssg, 2*60000);
+        //window.setInterval(notificationMssg, 150000);
+        //window.setInterval(notificationMssg1, 2*60000);
+        
+        /*if (date.getFullYear() === 2019 && date.getMonth() + 1 === 6) {
+            if(date.getDate() >= 2 && date.getDate() <= 4) {
+                $('.firework-eid').fireworks({ sound: false, opacity: 0.5, width: '100%', height: '100%' });
+            }            
+        }*/
+        if (date.getFullYear() === 2019 && date.getMonth() + 1 === 6) {
+            if(date.getDate() >= 2 && date.getDate() <= 5) {
+                window.setInterval(eidNotificationMssg, 60000);
+            }            
+        }
+
+        function playAlarm() {
+            var date = new Date();
+            //date.getHours(),date.getMinutes()
+            if(date.getHours() == alarmHour && date.getMinutes() == alarmMinute) {
+                alarmHour = null;
+                alarmMinute = null;
+                if(audioElement) {
+                    audioElement.play();
+                }
+            }
+        }
+        window.setInterval(playAlarm, 2000);
+    </script>
+</body>
+</html>
