@@ -77,10 +77,10 @@ body {
   margin: 50px 0px;
 
   .prayer-name {
-    font-size: 4.5vw;
+    font-size: 5.5vw;
     font-weight: bold;
     text-align: center;
-    text-align: right;
+    /* text-align: right; */
     width: 45%;
   }
 
@@ -93,7 +93,7 @@ body {
     transition: all 0.3s;
     text-transform: uppercase;
     margin: auto;
-    font-size: 4.5vw;
+    font-size: 5.5vw;
     width: 45%;
   }
 
@@ -107,6 +107,7 @@ body {
     font-weight: bold;
     float: left;
     border: none;
+    min-width: 75%;
   }
 }
 
@@ -128,11 +129,11 @@ body {
 
   .time-item {
     .prayer-name {
-      font-size: 85px;
+      font-size: 100px;
     }
 
     .prayer-time {
-      font-size: 85px;
+      font-size: 100px;
     }
   }
 
@@ -154,11 +155,11 @@ body {
 
   .time-item {
     .prayer-name {
-      font-size: 75px;
+      font-size: 80px;
     }
 
     .prayer-time {
-      font-size: 75px;
+      font-size: 80px;
     }
   }
 }
