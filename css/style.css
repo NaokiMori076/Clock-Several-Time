@@ -17,7 +17,8 @@ body {
 .top-banner {
   margin: 0 auto;
   text-align: center;
-  font-size: 3.7vw;
+  font-size: 4.2vw;
+  font-weight: bold;
 
   .title {
     color: #009146;
@@ -45,8 +46,10 @@ body {
   display: -webkit-flex;
   justify-content: space-around;
   -webkit-justify-content: space-around;
-  width: 100%;
+  width: 60%;
+  margin-bottom: 30px;
   padding: 0px 11px;
+  margin: auto;
 }
 
 
@@ -57,7 +60,7 @@ body {
   box-shadow: 0 2px 2px #444;
   color: #dc3545;
   font-family: "Open Sans", sans-serif;
-  font-size: 3.7vw;
+  font-size: 4.2vw;
   height: 100%;
   margin: 0 10px;
   text-align: center;
@@ -74,10 +77,15 @@ body {
   margin: 50px 0px;
 
   .prayer-name {
-    font-size: 4vw;
+    font-size: 4.5vw;
     font-weight: bold;
     text-align: center;
-    width: 40%;
+    text-align: right;
+    width: 45%;
+  }
+
+  .space {
+    width: 10%;
   }
 
   .prayer-time {
@@ -85,7 +93,8 @@ body {
     transition: all 0.3s;
     text-transform: uppercase;
     margin: auto;
-    width: 40%;
+    font-size: 4.5vw;
+    width: 45%;
   }
 
   .prayer-time button {
@@ -95,9 +104,8 @@ body {
     padding: 0px 10px;
     font-weight: 700;
     cursor: pointer;
-    font-size: 4vw;
     font-weight: bold;
-    float: right;
+    float: left;
     border: none;
   }
 }
@@ -111,11 +119,21 @@ body {
   }
 
   .top-banner {
-    font-size: 70px;
+    font-size: 85px;
   }
 
   .unit {
-    font-size: 70px;
+    font-size: 80px;
+  }
+
+  .time-item {
+    .prayer-name {
+      font-size: 85px;
+    }
+
+    .prayer-time {
+      font-size: 85px;
+    }
   }
 
 
@@ -123,46 +141,57 @@ body {
 
 @media (max-width: 1400px) {
   .top-banner {
+    font-size: 80px;
+  }
+
+  #clock {
+    width: 80%;
+  }
+
+  .unit {
     font-size: 65px;
   }
 
   .time-item {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    /* width: 100%; */
-
     .prayer-name {
-      width: 80%;
-      font-size: 70px;
+      font-size: 75px;
     }
 
     .prayer-time {
-      width: 80%;
-    }
-
-    .prayer-time button {
-      background: #009146;
-      color: #fff;
-      border-radius: 5px;
-      padding: 0px 10px;
-      font-weight: 700;
-      cursor: pointer;
-      font-size: 70px;
-      font-weight: bold;
-      border: none;
-      width: 100%;
-      margin: auto;
-      float: none;
-      /* width: 450px; */
+      font-size: 75px;
     }
   }
 }
 
 @media (max-width: 800px) {
   .top-banner {
-    font-size: 60px;
+    font-size: 75px;
+  }
+
+  #clock {
+    width: 90%;
+  }
+
+  .unit {
+    font-size: 55px;
+  }
+
+  .time-item {
+    .prayer-name {
+      width: 50%;
+      font-size: 55px;
+      margin-right: 5px;
+    }
+
+    .space {
+      width: 0%;
+    }
+
+    .prayer-time {
+      margin-left: 5px;
+      font-size: 55px;
+      width: 50%;
+    }
   }
 }
 
@@ -173,7 +202,7 @@ body {
   }
 
   .top-banner {
-    font-size: 55px;
+    font-size: 70px;
   }
 
   .unit {
@@ -182,17 +211,37 @@ body {
 
   .time-item {
     .prayer-name {
-      font-size: 60px;
+      font-size: 45px;
     }
 
-    .prayer-time button {
-      font-size: 60px;
+    .prayer-time {
+      font-size: 45px;
     }
   }
 }
 
 @media (max-width: 500px) {
   .top-banner {
+    font-size: 60px;
+  }
+
+  .unit {
+    font-size: 45px;
+  }
+
+  .time-item {
+    .prayer-name {
+      font-size: 40px;
+    }
+
+    .prayer-time {
+      font-size: 40px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .top-banner {
     font-size: 50px;
   }
 
@@ -202,47 +251,27 @@ body {
 
   .time-item {
     .prayer-name {
-      font-size: 50px;
+      font-size: 32px;
     }
 
-    .prayer-time button {
-      font-size: 50px;
-    }
-  }
-}
-
-@media (max-width: 400px) {
-  .top-banner {
-    font-size: 40px;
-  }
-
-  .unit {
-    font-size: 30px;
-  }
-
-  .time-item {
-    .prayer-name {
-      font-size: 40px;
-    }
-
-    .prayer-time button {
-      font-size: 40px;
+    .prayer-time {
+      font-size: 32px;
     }
   }
 }
 
 @media (max-width: 300px) {
   .unit {
-    font-size: 25px;
+    font-size: 35px;
   }
 
   .time-item {
     .prayer-name {
-      font-size: 35px;
+      font-size: 25px;
     }
 
-    .prayer-time button {
-      font-size: 35px;
+    .prayer-time {
+      font-size: 25px;
     }
   }
 }
